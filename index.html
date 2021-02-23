@@ -1,0 +1,270 @@
+<!-- Дизайнер подготовил макеты. Осталось только сверстать! Начнём с HTML и CSS, пока никакого JavaScript.
+Должен получиться 1 html документ, в котором реализованы 4 состояния, 3 из которых не отображаются:
+
+Поиск ещё не выполнялся (1 - search, 2 - search_active, 2 - search_active (more history) на макетах)
+Поиск с результатами (3 - search_live на макетах)
+Поиск без результатов (4 - search_ot_found на макетах)
+Страница проскроллена вниз (5 - scroll на макетах)
+
+Критерии приемки:
+
+Реализован 1 html документ
+Стили - в отдельном файле
+На странице реализованы блоки:
+
+"заголовок"
+"строка поиска"
+"результаты поиска"
+"подвал"
+
+
+У блока "строка поиска" 3 состояния:
+
+"обычное не в фокусе" (1 - search на макетах)
+"обычное в фокусе" (2 - search_active, 2 - search_active (more history), 3 - search_live, 4 - search_not_found на макетах)
+"на всю ширину экрана" (5 - scroll на макетах)
+
+
+У блока "результаты поиска" 3 состояния:
+
+"поиск ещё не выполнялся" (1 - search, 2 - search_active, 2 - search_active (more history) на макетах)
+"есть результаты" (3 - search_live, 5 - scroll на макетах)
+"ничего не найдено" (4 - search_not_found на макетах)
+
+
+Состояние блока задаётся классом его корневого элемента элемента в HTML
+У блока "строка поиска" есть набор тегов, который не помещается по ширине и перенос тегов на следующую строку происходит согласно макету
+При наведении курсора на крестик в строке поиска он подсвечивается
+В списке фильмов есть "плитки" во всех возможных состояниях: "загрузка", "есть текст, нет постера", "есть постер"
+Вёрстка соответствует макетам: картинки, размеры, шрифт, размер текста -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <title>tfschool-front-end</title>
+</head>
+
+<body>
+
+  <div class="page search">
+    <div>
+      <div class="logo-container">
+        <img class="logo" src="img.png/logo.png" alt="logo">
+      </div>
+      <div class="sticky">
+      <form class="search-form">
+        <input class="search-form__input" name="search" placeholder="Поиск фильмов по жанрам и актерам">
+        <div>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.75732 2.75732L16 16M16 16L29.2426 29.2426M16 16L29.2426 2.75732M16 16L2.75732 29.2426" stroke="white" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </form>
+    </div>
+    </div>
+
+    <div class="search-history">
+        <div class="block">Как я встретил вашу мамку</div>
+        <div class="block">Гоп стоп</div>
+        <div class="block">Весенний дрозд</div>
+        <div class="block hidable">Белоснежка и семь гномов</div>
+        <div class="block hidable">Трое в лодке</div>
+        <div class="block hidable">Бандитский петербург</div>
+        <div class="block hidable">Спящая женщина и принц</div>
+        <div class="block hidable">Война миров</div>
+        <div class="block hidable">Дикий дикий дикий запад</div>
+    </div>
+
+    <div class="no-results">
+      <span>Мы не поняли о чем речь ¯\_(ツ)_/¯</span>
+    </div>
+    <div class="results">
+      <span>Нашли 82 фильма</span>
+    </div>
+    <div class="list">
+      <div class="item">
+        <div class="item-content">
+          <img src="img2.png/1.png" class="image"/>
+          <div class="rating">
+            <div class="cool">8,6</div>
+            <div class="info">
+              <div class="name white">Форрест Гамп</div>
+              <div class="meta">
+                <div class="genre">Драма, романтика</div>
+                <div class="date">1994</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      <div class="item">
+        <div class="item-content">
+          <img src="img2.png/2.png" class="image"/>
+          <div class="rating">
+            <div class="bad">4,8</div>
+            <div class="info">
+              <div class="name white">Спасти рядового Райана</div>
+              <div class="meta">
+                <div class="genre">Военный, боевик</div>
+                <div class="date">1998</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <img src="img2.png/3.png" class="image"/>
+          <div class="rating">
+            <div class="terrible">2,8</div>
+            <div class="info">
+              <div class="name white">Аполлон 13</div>
+              <div class="meta">
+                <div class="genre">Драма, приключения</div>
+                <div class="date">1995</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <img src="img2.png/4.png" class="image"/>
+          <div class="rating">
+            <div class="smile">3,8</div>
+            <div class="info">
+              <div class="name white">Инферно</div>
+              <div class="meta">
+                <div class="genre">Детектив, триллер</div>
+                <div class="date">2016</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="info">
+            <div class="name">Шпионский мост</div>
+            <div class="meta">
+              <div class="genre">Боевик, триллер</div>
+              <div class="date">2017</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="img" style="background-image: url(img2.png/5.png)"></div>
+          <div class="skeleton hidable">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="img" style="background-image: url(img2.png/6.png)"></div>
+          <div class="skeleton hidable">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content">
+          <div class="skeleton">
+            <div class="line"></div>
+            <div class="line line_short"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="element"></div>
+
+  </div>
+
+  <footer class="footer">
+      &copy; 2019 Тинькофф Прокат
+  </footer>
+
+</body>
+</html>
+

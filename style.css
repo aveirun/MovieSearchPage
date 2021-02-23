@@ -1,0 +1,719 @@
+
+html, body {
+    background: #1C1C1C;
+    font-family: Roboto;
+    height: 100%;
+    position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1440px;
+  max-width: 1440px;
+  min-width: 1440px;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.page {
+  
+}
+
+.search {}
+
+.search .search-form {
+  height: 74px;
+  padding-top: 54px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-self: start;
+}
+
+.search .search-form__input {
+  width: 628px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ffff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  background-image: url('img.png/Union.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 63px;
+}
+
+.search svg {
+  display: none;
+}
+
+.search .list {
+  display: none;
+}
+
+.search .search-history {
+  display: none;
+}
+
+.search .no-results {
+  display: none;
+}
+
+.search .results {
+  display: none;
+}
+
+.search-active {}
+
+.search-active .search-form {
+  height: 74px;
+  padding-top: 54px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-self: start;
+}
+
+.search-active .search-form__input {
+  width: 1280px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(253, 206, 37, 1);
+  outline: none;
+  text-align: start;
+  padding-left: 60px;
+  background-position-x: left;
+  color: rgba(255, 255, 255, 0.4);
+  background-image: url('img.png/Union.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 10px;
+}
+
+.search-active .search-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+}
+
+.search-active svg {
+  display: none;
+}
+
+.search-active .search-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  padding-top: 20px;
+}
+
+.search-active .block {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.search-active .block:hover {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.search-active .search-history .hidable {
+  display: none;
+}
+
+.search-active .search-more-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  padding-top: 20px;
+}
+
+.search-active .list {
+  display: none;
+}
+
+.search-live {}
+
+.search-live .search-form {
+  height: 74px;
+  padding-top: 54px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-self: start;
+}
+
+.search-live .search-form__input {
+  width: 1280px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(253, 206, 37, 1);
+  outline: none;
+  text-align: start;
+  padding-left: 60px;
+  background-position-x: left;
+  color: rgba(255, 255, 255, 0.4);
+  background-image: url('img.png/Union.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 10px;
+}
+
+svg {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 186px;
+  right: 90px;
+}
+
+svg path:hover {
+  stroke-opacity: 1;
+}
+
+.search-live .search-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  padding-top: 20px;
+}
+
+.search-live .block {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.search-live .block:hover {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.search-live .search-history .hidable {
+  display: none;
+}
+
+.search-live .no-results {
+  display: none;
+}
+
+.search-live .results {
+  width: 309px;
+  height: 48px;
+  padding-top: 170px;
+  padding-left: 80px;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.search-live .list {
+  padding-top: 36px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.search-live .item {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.search-live .item-content {
+  height: 454px;
+  border-radius: 8px;
+  background-color: gray;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.search-live .image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
+}
+
+.search-live .img {
+  display: none;
+}
+
+.search-live .skeleton {
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 330px;
+}
+
+.search-live .item:hover .rating {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 26.43%, rgba(0, 0, 0, 0.8) 72.41%);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.search-live .bad {
+  background-image: url(img2.png/r01.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 0px;
+  padding-left: 32px;
+  margin-top: 280px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.search-live .terrible {
+  background-image: url(img2.png/r02.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 0px;
+  padding-left: 32px;
+  margin-top: 280px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.search-live .smile {
+  background-image: url(img2.png/r03.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 0px;
+  padding-left: 32px;
+  margin-top: 280px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.search-live .cool {
+  background-image: url(img2.png/r04.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 0px;
+  padding-left: 32px;
+  margin-top: 280px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.search-live .info {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+width: 100%;
+top: 322px;
+}
+
+.search-live .name {
+font-size: 24px;
+margin-bottom: 12px;
+margin-left: 20px;
+margin-right: 20px;
+color: rgba(255, 255, 255, 0.24);
+font-weight: bold;
+}
+
+.search-live .white {
+  color: #FFFFFF;
+}
+
+.search-live .meta {
+display: flex;
+justify-content: space-between;
+margin-bottom: 24px;
+margin-left: 20px;
+margin-right: 20px;
+color: rgba(255, 255, 255, 0.24);
+}
+
+.search-live .genre {
+font-size: 16px;
+}
+
+.search-live .data {
+font-size: 16px;
+color:#FFFFFF;
+}
+
+.search-live .line {
+height: 24px;
+width: 246px;
+background-color: rgba(255, 255, 255, 0.08);
+border: none;
+}
+
+.search-live .line + .line {
+margin-top: 5px;
+}
+
+.search-live .line_short {
+width: 60%;
+background-color: rgba(255, 255, 255, 0.08);
+border: none;
+}
+
+.search-live .element {
+  height: 100px;
+  overflow: visible;
+}
+
+.search-not-found {}
+
+.search-not-found .search-form {
+  height: 74px;
+  padding-top: 54px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-self: start;
+}
+
+.search-not-found .search-form__input {
+  width: 1280px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(253, 206, 37, 1);
+  outline: none;
+  text-align: start;
+  padding-left: 60px;
+  background-position-x: left;
+  color: rgba(255, 255, 255, 0.4);
+  background-image: url('img.png/Union.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 10px;
+}
+
+svg {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 186px;
+  right: 90px;
+}
+
+svg path:hover {
+  stroke-opacity: 1;
+}
+
+
+.search-not-found .search-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  padding-top: 20px;
+}
+
+.search-not-found .block {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.search-not-found .block:hover {
+  float: left;
+  margin: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  font-size: 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.search-not-found .search-history .hidable {
+  display: none;
+}
+
+.search-not-found .no-results {
+  width: 604px;
+  height: 48px;
+  padding-top: 170px;
+  padding-left: 80px;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.search-not-found .results {
+  display: none;
+}
+
+.search-not-found .list {
+  display: none;
+}
+
+.search-not-found .element {
+  height: 500px;
+  overflow: visible;
+}
+
+.scroll {}
+
+.scroll .logo-container {
+  display: none;
+}
+
+.scroll .search-form {
+  height: 74px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  justify-self: start;
+  margin-right: -10px;
+  background-color: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.scroll .search-form__input {
+  width: 1440px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  outline: none;
+  text-align: start;
+  padding-left: 130px;
+  background-position-x: left;
+  color: rgba(255, 255, 255, 0.4);
+  background-image: url('img.png/Union.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-position-x: 80px;
+}
+
+.scroll svg {
+  width: 27px;
+  height: 27px;
+  top: 25px;
+  position: fixed;
+  right: 100px;
+}
+
+svg path:hover {
+  stroke-opacity: 1;
+}
+
+.scroll .sticky {
+  position: fixed;
+  width: 100%;
+  top:0;
+}
+
+.scroll .search-history {
+  display: none;
+}
+
+.scroll .search-history .hidable {
+  display: none;
+}
+
+.scroll .no-results {
+  display: none;
+}
+
+.scroll .results {
+  width: 309px;
+  height: 48px;
+  padding-top: 100px;
+  padding-left: 80px;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+.scroll .list {
+  padding-top: 36px;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.scroll .item {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.scroll .item-content {
+  height: 454px;
+  border-radius: 8px;
+  background-color: gray;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scroll .rating {
+  display: none;
+}
+
+.scroll .image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.scroll .img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.scroll .info {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+width: 100%;
+}
+
+.scroll .name {
+font-size: 24px;
+margin-bottom: 12px;
+margin-left: 20px;
+margin-right: 20px;
+color: rgba(255, 255, 255, 0.24);
+font-weight: bold;
+}
+
+.scroll .meta {
+display: flex;
+justify-content: space-between;
+margin-bottom: 24px;
+margin-left: 20px;
+margin-right: 20px;
+color: rgba(255, 255, 255, 0.24);
+}
+
+.scroll .genre {
+font-size: 16px;
+}
+
+.scroll .data {
+font-size: 16px;
+}
+
+.scroll .hidable {
+  display: none;
+}
+
+.scroll .skeleton {
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 330px;
+}
+
+.scroll .line {
+height: 24px;
+width: 246px;
+background-color: rgba(255, 255, 255, 0.08);
+border: none;
+}
+
+.scroll .line + .line {
+margin-top: 5px;
+}
+
+.scroll .line_short {
+width: 60%;
+background-color: rgba(255, 255, 255, 0.08);
+border: none;
+}
+
+.scroll .element {
+  height: 300px;
+  overflow: visible;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.4);
+  width: 100%; /* Ширина слоя */
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 16px;
+}
