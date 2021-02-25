@@ -1,4 +1,4 @@
-#### There are 4 states (only one of them is showing)
+#### There are 4 states (only one of them is showing):
 
 1. Input is not active
 2. Results of a search
